@@ -76,6 +76,7 @@ InternalMapEntries:
 	internal_map BILLS_HOUSE,                   12,  0, SeaCottageName
 	internal_map VERMILION_DOCK,                10,  9, VermilionCityName
 	internal_map SS_ANNE_B1F_ROOMS,              9, 10, SSAnneName
+	internal_map KINDLE_ROAD,		     1, 13, KindleRoadName	
 	internal_map VICTORY_ROAD_1F,                0,  4, VictoryRoadName
 	internal_map HALL_OF_FAME,                   0,  2, PokemonLeagueName
 	internal_map UNDERGROUND_PATH_NORTH_SOUTH,  10,  5, UndergroundPathName
@@ -116,5 +117,4 @@ InternalMapEntries:
 	internal_map ROCK_TUNNEL_B1F,               14,  3, RockTunnelName
 	internal_map SILPH_CO_ELEVATOR,             10,  5, SilphCoName
 	internal_map AGATHAS_ROOM,                   0,  2, PokemonLeagueName
-	internal_map KINDLE_ROAD,		     1, 13, KindleRoadName
 	db -1 ; end
