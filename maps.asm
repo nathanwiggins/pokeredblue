@@ -1219,3 +1219,8 @@ INCLUDE "data/maps/headers/AgathasRoom.asm"
 INCLUDE "scripts/AgathasRoom.asm"
 INCLUDE "data/maps/objects/AgathasRoom.asm"
 AgathasRoom_Blocks: INCBIN "maps/AgathasRoom.blk"
+
+INCLUDE "data/maps/headers/KindleRoad.asm"
+INCLUDE "scripts/KindleRoad.asm"
+INCLUDE "data/maps/objects/KindleRoad.asm"
+KindleRoad_Blocks: INCBIN "maps/KindleRoad.blk"
