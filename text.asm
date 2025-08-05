@@ -267,6 +267,8 @@ SECTION "Text 11", ROMX
 
 INCLUDE "data/text/text_7.asm"
 
+INCLUDE "text/KindleRoad.asm"
+
 
 SECTION "Pokédex Text", ROMX
 
