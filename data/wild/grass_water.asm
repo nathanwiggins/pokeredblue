@@ -105,7 +105,7 @@ WildDataPointers:
 	dw NothingWildMons
 	dw NothingWildMons
 	dw NothingWildMons
-	dw NothingWildMons
+	dw SeaRoutesWildMons
 	dw NothingWildMons
 	dw NothingWildMons
 	dw VictoryRoad1FWildMons
