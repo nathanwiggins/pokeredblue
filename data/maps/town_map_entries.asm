@@ -44,6 +44,7 @@ ExternalMapEntries:
 	external_map  0,  6, Route23Name
 	external_map 10,  1, Route24Name
 	external_map 11,  0, Route25Name
+	external_map  1, 13, KindleRoadName
 	assert_table_length FIRST_INDOOR_MAP
 
 
