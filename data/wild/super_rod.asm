@@ -19,6 +19,7 @@ SuperRodData:
 	dbw ROUTE_19,            .Group8
 	dbw ROUTE_20,            .Group8
 	dbw ROUTE_21,            .Group8
+	dbw KINDLE_ROAD,	 .Group8
 	dbw ROUTE_22,            .Group2
 	dbw ROUTE_23,            .Group9
 	dbw ROUTE_24,            .Group3
