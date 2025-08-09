@@ -9,4 +9,4 @@ MtEmber1F_Object:
 
 	def_object_events
 
-	def_warps_to MT_MOON_1F
+	def_warps_to MT_EMBER_1F
