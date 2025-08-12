@@ -63,3 +63,5 @@ ENDM
 	trainer_const AGATHA         ; $2E
 	trainer_const LANCE          ; $2F
 DEF NUM_TRAINERS EQU const_value - 1
+
+DEF PALLETTOWN_TRAINER_NO EQU $ff

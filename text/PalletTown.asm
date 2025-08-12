@@ -52,5 +52,14 @@ _PalletTownPlayersHouseSignText::
 	done
 
 _PalletTownRivalsHouseSignText::
-	text "<RIVAL>'s house "
-	done
+        text "<RIVAL>'s house "
+        done
+
+_PalletTownTrainerChallengeText::
+        text "Let's battle!"
+        done
+
+_PalletTownTrainerAfterBattleText::
+        text "Good fight!"
+        line "Come again!"
+        done

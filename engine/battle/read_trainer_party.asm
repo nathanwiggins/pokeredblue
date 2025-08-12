@@ -1,9 +1,9 @@
 ReadTrainer:
 
 ; don't change any moves in a link battle
-	ld a, [wLinkState]
-	and a
-	ret nz
+        ld a, [wLinkState]
+        and a
+        ret nz
 
 ; set [wEnemyPartyCount] to 0, [wEnemyPartySpecies] to FF
 ; XXX first is total enemy pokemon?
@@ -12,11 +12,22 @@ ReadTrainer:
 	xor a
 	ld [hli], a
 	dec a
-	ld [hl], a
+        ld [hl], a
 
+        ; check for Pallet Town random trainer
+        ld a, [wCurOpponent]
+        cp OPP_COOLTRAINER_M
+        jr nz, .GetTrainerData
+        ld a, [wTrainerNo]
+        cp PALLETTOWN_TRAINER_NO
+        jr nz, .GetTrainerData
+        call GenerateRandomTrainerTeam
+        ret
+
+.GetTrainerData
 ; get the pointer to trainer data for this class
-	ld a, [wCurOpponent]
-	sub OPP_ID_OFFSET + 1 ; convert value from pokemon to trainer
+        ld a, [wCurOpponent]
+        sub OPP_ID_OFFSET + 1 ; convert value from pokemon to trainer
 	add a
 	ld hl, TrainerDataPointers
 	ld c, a
@@ -154,13 +165,36 @@ ReadTrainer:
 	ld b, a
 .LastLoop
 ; update wAmountMoneyWon addresses (money to win) based on enemy's level
-	ld hl, wTrainerBaseMoney + 1
-	ld c, 2 ; wAmountMoneyWon is a 3-byte number
-	push bc
-	predef AddBCDPredef
-	pop bc
-	inc de
-	inc de
-	dec b
-	jr nz, .LastLoop ; repeat wCurEnemyLevel times
-	ret
+        ld hl, wTrainerBaseMoney + 1
+        ld c, 2 ; wAmountMoneyWon is a 3-byte number
+        push bc
+        predef AddBCDPredef
+        pop bc
+        inc de
+        inc de
+        dec b
+        jr nz, .LastLoop ; repeat wCurEnemyLevel times
+        ret
+
+GenerateRandomTrainerTeam:
+        ld b, 3 ; three Pokémon
+.LoopRandomMon
+        call Random
+        cp NUM_POKEMON
+        jr nc, .LoopRandomMon
+        inc a
+        ld [wCurPartySpecies], a
+.LevelLoop
+        call Random
+        cp 100
+        jr nc, .LevelLoop
+        inc a
+        ld [wCurEnemyLevel], a
+        ld a, ENEMY_PARTY_DATA
+        ld [wMonDataLocation], a
+        push bc
+        call AddPartyMon
+        pop bc
+        dec b
+        jr nz, .LoopRandomMon
+        ret

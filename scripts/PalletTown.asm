@@ -1,26 +1,34 @@
 PalletTown_Script:
-	CheckEvent EVENT_GOT_POKEBALLS_FROM_OAK
-	jr z, .next
-	SetEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS
+        CheckEvent EVENT_GOT_POKEBALLS_FROM_OAK
+        jr z, .next
+        SetEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS
 .next
-	call EnableAutoTextBoxDrawing
-	ld hl, PalletTown_ScriptPointers
-	ld a, [wPalletTownCurScript]
-	jp CallFunctionInTable
+        call EnableAutoTextBoxDrawing
+        ld hl, PalletTownTrainerHeaders
+        ld de, PalletTown_ScriptPointers
+        ld a, [wPalletTownCurScript]
+        call ExecuteCurMapScriptInTable
+        ld [wPalletTownCurScript], a
+        ret
+
+PalletTownTrainerHeaders:
+        db -1 ; end
 
 PalletTown_ScriptPointers:
-	def_script_pointers
-	dw_const PalletTownDefaultScript,              SCRIPT_PALLETTOWN_DEFAULT
-	dw_const PalletTownOakHeyWaitScript,           SCRIPT_PALLETTOWN_OAK_HEY_WAIT
-	dw_const PalletTownOakWalksToPlayerScript,     SCRIPT_PALLETTOWN_OAK_WALKS_TO_PLAYER
-	dw_const PalletTownOakNotSafeComeWithMeScript, SCRIPT_PALLETTOWN_OAK_NOT_SAFE_COME_WITH_ME
-	dw_const PalletTownPlayerFollowsOakScript,     SCRIPT_PALLETTOWN_PLAYER_FOLLOWS_OAK
-	dw_const PalletTownDaisyScript,                SCRIPT_PALLETTOWN_DAISY
-	dw_const PalletTownNoopScript,                 SCRIPT_PALLETTOWN_NOOP
+        def_script_pointers
+        dw_const PalletTownDefaultScript,              SCRIPT_PALLETTOWN_DEFAULT
+        dw_const DisplayEnemyTrainerTextAndStartBattle, SCRIPT_PALLETTOWN_START_BATTLE
+        dw_const EndTrainerBattle,                      SCRIPT_PALLETTOWN_END_BATTLE
+        dw_const PalletTownOakHeyWaitScript,           SCRIPT_PALLETTOWN_OAK_HEY_WAIT
+        dw_const PalletTownOakWalksToPlayerScript,     SCRIPT_PALLETTOWN_OAK_WALKS_TO_PLAYER
+        dw_const PalletTownOakNotSafeComeWithMeScript, SCRIPT_PALLETTOWN_OAK_NOT_SAFE_COME_WITH_ME
+        dw_const PalletTownPlayerFollowsOakScript,     SCRIPT_PALLETTOWN_PLAYER_FOLLOWS_OAK
+        dw_const PalletTownDaisyScript,                SCRIPT_PALLETTOWN_DAISY
+        dw_const PalletTownNoopScript,                 SCRIPT_PALLETTOWN_NOOP
 
 PalletTownDefaultScript:
-	CheckEvent EVENT_FOLLOWED_OAK_INTO_LAB
-	ret nz
+        CheckEvent EVENT_FOLLOWED_OAK_INTO_LAB
+        ret nz
 	ld a, [wYCoord]
 	cp 1 ; is player near north exit?
 	ret nz
@@ -39,9 +47,9 @@ PalletTownDefaultScript:
 	SetEvent EVENT_OAK_APPEARED_IN_PALLET
 
 	; trigger the next script
-	ld a, SCRIPT_PALLETTOWN_OAK_HEY_WAIT
-	ld [wPalletTownCurScript], a
-	ret
+        ld a, SCRIPT_PALLETTOWN_OAK_HEY_WAIT
+        ld [wPalletTownCurScript], a
+        ret
 
 PalletTownOakHeyWaitScript:
 	xor a
@@ -147,17 +155,47 @@ PalletTownDaisyScript:
 	ret z
 	SetEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS_2
 PalletTownNoopScript:
-	ret
+        ret
+
+PalletTownTrainerText:
+        text_asm
+        ld hl, .BeforeText
+        call PrintText
+        ld hl, wStatusFlags3
+        set BIT_TALKED_TO_TRAINER, [hl]
+        set BIT_PRINT_END_BATTLE_TEXT, [hl]
+        ld hl, .AfterText
+        ld de, .AfterText
+        call SaveEndBattleTextPointers
+        ldh a, [hSpriteIndex]
+        ld [wSpriteIndex], a
+        ld hl, wStatusFlags7
+        set BIT_USE_CUR_MAP_SCRIPT, [hl]
+        call EngageMapTrainer
+        ld hl, wCurMapScript
+        inc [hl]
+        ld a, [hl]
+        ld [wPalletTownCurScript], a
+        jp StartTrainerBattle
+
+.BeforeText:
+        text_far _PalletTownTrainerChallengeText
+        text_end
+
+.AfterText:
+        text_far _PalletTownTrainerAfterBattleText
+        text_end
 
 PalletTown_TextPointers:
-	def_text_pointers
-	dw_const PalletTownOakText,              TEXT_PALLETTOWN_OAK
-	dw_const PalletTownGirlText,             TEXT_PALLETTOWN_GIRL
-	dw_const PalletTownFisherText,           TEXT_PALLETTOWN_FISHER
-	dw_const PalletTownOaksLabSignText,      TEXT_PALLETTOWN_OAKSLAB_SIGN
-	dw_const PalletTownSignText,             TEXT_PALLETTOWN_SIGN
-	dw_const PalletTownPlayersHouseSignText, TEXT_PALLETTOWN_PLAYERSHOUSE_SIGN
-	dw_const PalletTownRivalsHouseSignText,  TEXT_PALLETTOWN_RIVALSHOUSE_SIGN
+        def_text_pointers
+        dw_const PalletTownOakText,              TEXT_PALLETTOWN_OAK
+        dw_const PalletTownGirlText,             TEXT_PALLETTOWN_GIRL
+        dw_const PalletTownFisherText,           TEXT_PALLETTOWN_FISHER
+        dw_const PalletTownTrainerText,          TEXT_PALLETTOWN_TRAINER
+        dw_const PalletTownOaksLabSignText,      TEXT_PALLETTOWN_OAKSLAB_SIGN
+        dw_const PalletTownSignText,             TEXT_PALLETTOWN_SIGN
+        dw_const PalletTownPlayersHouseSignText, TEXT_PALLETTOWN_PLAYERSHOUSE_SIGN
+        dw_const PalletTownRivalsHouseSignText,  TEXT_PALLETTOWN_RIVALSHOUSE_SIGN
 
 PalletTownOakText:
 	text_asm
