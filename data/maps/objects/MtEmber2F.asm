@@ -4,7 +4,7 @@
         const_export MTEMBER2F_POKEMANIAC
         const_export MTEMBER2F_FIRE_STONE
         const_export MTEMBER2F_MAX_REVIVE
-        const_export MTEMBER2F_TM41
+        const_export MTEMBER2F_TM43
 
 MtEmber2F_Object:
 	db $3 ; border block
