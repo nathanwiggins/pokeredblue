@@ -1,3 +1,11 @@
+        object_const_def
+        const_export MTEMBER2F_HIKER
+        const_export MTEMBER2F_BURGLAR
+        const_export MTEMBER2F_POKEMANIAC
+        const_export MTEMBER2F_FIRE_STONE
+        const_export MTEMBER2F_MAX_REVIVE
+        const_export MTEMBER2F_TM35
+
 MtEmber2F_Object:
 	db $3 ; border block
 
