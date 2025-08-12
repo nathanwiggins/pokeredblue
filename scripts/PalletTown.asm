@@ -161,9 +161,6 @@ PalletTownTrainerText:
         text_asm
         ld hl, .BeforeText
         call PrintText
-        ld hl, wStatusFlags3
-        set BIT_TALKED_TO_TRAINER, [hl]
-        set BIT_PRINT_END_BATTLE_TEXT, [hl]
         ld hl, .AfterText
         ld de, .AfterText
         call SaveEndBattleTextPointers
@@ -171,11 +168,11 @@ PalletTownTrainerText:
         ld [wSpriteIndex], a
         ld hl, wStatusFlags7
         set BIT_USE_CUR_MAP_SCRIPT, [hl]
+        xor a
+        ld [wTrainerHeaderFlagBit], a
         call EngageMapTrainer
         ld hl, wCurMapScript
         inc [hl]
-        ld a, [hl]
-        ld [wPalletTownCurScript], a
         jp StartTrainerBattle
 
 .BeforeText:

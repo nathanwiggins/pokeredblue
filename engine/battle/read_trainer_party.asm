@@ -183,6 +183,9 @@ GenerateRandomTrainerTeam:
         cp NUM_POKEMON
         jr nc, .LoopRandomMon
         inc a
+        ld [wPokedexNum], a
+        predef PokedexToIndex
+        ld a, [wPokedexNum]
         ld [wCurPartySpecies], a
 .LevelLoop
         call Random
