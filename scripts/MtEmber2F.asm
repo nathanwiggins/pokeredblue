@@ -1,6 +1,6 @@
-MtEmber1F_Script:
+MtEmber2F_Script:
 	jp EnableAutoTextBoxDrawing
 
-MtEmber1F_TextPointers:
+MtEmber2F_TextPointers:
 
 	text_end ; unused
