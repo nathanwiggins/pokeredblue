@@ -20,7 +20,7 @@ MtEmber2F_TextPointers:
         dw_const MtEmber2FPokemaniacText, TEXT_MTEMBER2F_POKEMANIAC
         dw_const PickUpItemText,          TEXT_MTEMBER2F_FIRE_STONE
         dw_const PickUpItemText,          TEXT_MTEMBER2F_MAX_REVIVE
-        dw_const PickUpItemText,          TEXT_MTEMBER2F_TM35
+        dw_const PickUpItemText,          TEXT_MTEMBER2F_TM41
 
 MtEmber2TrainerHeaders:
         def_trainers
