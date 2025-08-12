@@ -239,5 +239,5 @@ DEF SHOW EQU $15
 	const HS_ARTICUNO                      ; E3 X
 	const HS_MT_EMBER_2F_FIRE_STONE        ; E4 X
     const HS_MT_EMBER_2F_MAX_REVIVE        ; E5 X
-    const HS_MT_EMBER_2F_TM35              ; E6 X
+    const HS_MT_EMBER_2F_TM41              ; E6 X
 DEF NUM_HS_OBJECTS EQU const_value
