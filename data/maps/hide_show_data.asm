@@ -113,7 +113,7 @@ MapHSPointers:
 	dw NoHS
 	dw VictoryRoad1FHS
 	dw NoHS
-	dw NoHS
+	dw MtEmber2FHS
 	dw NoHS
 	dw NoHS
 	dw NoHS
@@ -567,6 +567,6 @@ SeafoamIslandsB4FHS:
 MtEmber2FHS:
     db MT_EMBER_2F, MTEMBER2F_FIRE_STONE, SHOW
     db MT_EMBER_2F, MTEMBER2F_MAX_REVIVE, SHOW
-    db MT_EMBER_2F, MTEMBER2F_TM41, SHOW
+    db MT_EMBER_2F, MTEMBER2F_TM43, SHOW
     db $FF, $01, SHOW ; end
     assert_table_length NUM_HS_OBJECTS + 1
