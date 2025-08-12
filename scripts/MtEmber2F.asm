@@ -1,6 +1,6 @@
 MtEmber2F_Script:
         call EnableAutoTextBoxDrawing
-        ld hl, MtEmber2TrainerHeaders
+        ld hl, MtEmber2FTrainerHeaders
         ld de, MtEmber2F_ScriptPointers
         ld a, [wMtEmber2FCurScript]
         call ExecuteCurMapScriptInTable
@@ -22,31 +22,31 @@ MtEmber2F_TextPointers:
         dw_const PickUpItemText,          TEXT_MTEMBER2F_MAX_REVIVE
         dw_const PickUpItemText,          TEXT_MTEMBER2F_TM41
 
-MtEmber2TrainerHeaders:
+MtEmber2FTrainerHeaders:
         def_trainers
-MtEmber2TrainerHeader0:
+MtEmber2FTrainerHeader0:
         trainer EVENT_BEAT_MT_EMBER_2F_TRAINER_0, 3, MtEmber2FBattleText1, MtEmber2FEndBattleText1, MtEmber2FAfterBattleText1
-MtEmber2TrainerHeader1:
+MtEmber2FTrainerHeader1:
         trainer EVENT_BEAT_MT_EMBER_2F_TRAINER_1, 3, MtEmber2FBattleText2, MtEmber2FEndBattleText2, MtEmber2FAfterBattleText2
-MtEmber2TrainerHeader2:
+MtEmber2FTrainerHeader2:
         trainer EVENT_BEAT_MT_EMBER_2F_TRAINER_2, 3, MtEmber2FBattleText3, MtEmber2FEndBattleText3, MtEmber2FAfterBattleText3
         db -1 ; end
 
 MtEmber2FHikerText:
         text_asm
-        ld hl, MtEmber2TrainerHeader0
+        ld hl, MtEmber2FTrainerHeader0
         call TalkToTrainer
         jp TextScriptEnd
 
 MtEmber2FBurglarText:
         text_asm
-        ld hl, MtEmber2TrainerHeader1
+        ld hl, MtEmber2FTrainerHeader1
         call TalkToTrainer
         jp TextScriptEnd
 
 MtEmber2FPokemaniacText:
         text_asm
-        ld hl, MtEmber2TrainerHeader2
+        ld hl, MtEmber2FTrainerHeader2
         call TalkToTrainer
         jp TextScriptEnd
 
