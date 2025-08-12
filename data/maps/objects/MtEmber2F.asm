@@ -4,7 +4,7 @@
         const_export MTEMBER2F_POKEMANIAC
         const_export MTEMBER2F_FIRE_STONE
         const_export MTEMBER2F_MAX_REVIVE
-        const_export MTEMBER2F_TM35
+        const_export MTEMBER2F_TM41
 
 MtEmber2F_Object:
 	db $3 ; border block
@@ -20,6 +20,6 @@ MtEmber2F_Object:
     object_event 26, 18, SPRITE_SUPER_NERD, STAY, RIGHT, TEXT_MTEMBER2F_POKEMANIAC, OPP_POKEMANIAC, 8
     object_event 25, 33, SPRITE_POKE_BALL, STAY, NONE, TEXT_MTEMBER2F_FIRE_STONE, FIRE_STONE
     object_event 27,  4, SPRITE_POKE_BALL, STAY, NONE, TEXT_MTEMBER2F_MAX_REVIVE, MAX_REVIVE
-    object_event 33, 32, SPRITE_POKE_BALL, STAY, NONE, TEXT_MTEMBER2F_TM35, TM_EARTHQUAKE
+    object_event 33, 32, SPRITE_POKE_BALL, STAY, NONE, TEXT_MTEMBER2F_TM41, TM_SKY_ATTACK
 
 	def_warps_to MT_EMBER_2F
