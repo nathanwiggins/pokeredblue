@@ -66,9 +66,9 @@ IF DEF(_DEBUG)
 	ld [hli], a
 	ld [hl], a
 
-	; Jolteon gets Thunderbolt.
+	; Jolteon gets Flash.
 	ld hl, wPartyMon3Moves + 3
-	ld a, THUNDERBOLT
+	ld a, FLASH
 	ld [hl], a
 	ld hl, wPartyMon3PP + 3
 	ld a, 15

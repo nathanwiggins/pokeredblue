@@ -213,6 +213,8 @@ PokemaniacData:
 	db 40, CHARMELEON, LAPRAS, LICKITUNG, 0
 ; Rock Tunnel 1F
 	db 23, CUBONE, SLOWPOKE, 0
+; Mt. Ember 2F
+    db 36, NIDORINA, NIDORINO, MAROWAK, RHYDON, 0
 
 SuperNerdData:
 ; Mt. Moon 1F
@@ -255,6 +257,8 @@ HikerData:
 	db 19, GEODUDE, MACHOP, GEODUDE, GEODUDE, 0
 	db 20, ONIX, ONIX, GEODUDE, 0
 	db 21, GEODUDE, GRAVELER, 0
+; Mt. Ember 2F
+    db 37, GRAVELER, MACHOKE, ONIX, 0
 
 BikerData:
 ; Route 13
@@ -302,6 +306,8 @@ BurglarData:
 	db 38, NINETALES, 0
 ; Mansion B1F
 	db 34, GROWLITHE, PONYTA, 0
+; Mt. Ember 2F
+    db 38, RAPIDASH, CHARMELEON, 0
 
 EngineerData:
 ; Unused
