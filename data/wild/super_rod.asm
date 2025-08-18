@@ -19,7 +19,7 @@ SuperRodData:
 	dbw ROUTE_19,            .Group8
 	dbw ROUTE_20,            .Group8
 	dbw ROUTE_21,            .Group8
-	dbw KINDLE_ROAD,	 .Group8
+	dbw KINDLE_ROAD,	 	 .Group8
 	dbw ROUTE_22,            .Group2
 	dbw ROUTE_23,            .Group9
 	dbw ROUTE_24,            .Group3
@@ -35,6 +35,7 @@ SuperRodData:
 	dbw CERULEAN_CAVE_2F,    .Group9
 	dbw CERULEAN_CAVE_B1F,   .Group9
 	dbw CERULEAN_CAVE_1F,    .Group9
+	dbw WILD_MEADOW,		 .Group9
 	db -1 ; end
 
 ; fishing groups
