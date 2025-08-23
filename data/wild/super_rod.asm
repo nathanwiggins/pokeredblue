@@ -36,6 +36,7 @@ SuperRodData:
 	dbw CERULEAN_CAVE_B1F,   .Group9
 	dbw CERULEAN_CAVE_1F,    .Group9
 	dbw WILD_MEADOW,		 .Group9
+	dbw WATER_PATH,		 	 .Group9
 	db -1 ; end
 
 ; fishing groups
