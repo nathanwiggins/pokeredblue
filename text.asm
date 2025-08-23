@@ -270,6 +270,7 @@ INCLUDE "data/text/text_7.asm"
 INCLUDE "text/KindleRoad.asm"
 INCLUDE "text/MtEmber2F.asm"
 INCLUDE "text/MtEmber3F.asm"
+INCLUDE "text/RuinValley.asm"
 
 
 SECTION "Pokédex Text", ROMX
