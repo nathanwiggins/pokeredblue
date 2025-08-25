@@ -271,6 +271,7 @@ INCLUDE "text/KindleRoad.asm"
 INCLUDE "text/MtEmber2F.asm"
 INCLUDE "text/MtEmber3F.asm"
 INCLUDE "text/RuinValley.asm"
+INCLUDE "text/PokemonTemple.asm"
 
 
 SECTION "Pokédex Text", ROMX
