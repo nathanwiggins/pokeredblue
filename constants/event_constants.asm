@@ -779,6 +779,10 @@ DEF INDIGO_PLATEAU_EVENTS_END EQU const_value - 1
         const EVENT_BEAT_MT_EMBER_2F_TRAINER_1
         const EVENT_BEAT_MT_EMBER_2F_TRAINER_2
 
+; Pokemon Temple events
+		const_next $A04
+		const EVENT_BEAT_MEW
+
 ; End of events
-        const_next $A04
+        const_next $A05
 DEF NUM_EVENTS EQU const_value
