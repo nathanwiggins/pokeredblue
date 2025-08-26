@@ -26,5 +26,15 @@ IF DEF(_BLUE)
 ENDC
 	end_grass_wildmons
 
+; Red Version:
+; CLEFABLE (80%)
+; WIGGLYTUFF (19%)
+; MEW (1%)
+
+; Blue Version:
+; WIGGLYTUFF (80%)
+; CLEFABLE (19%)
+; MEW (1%)
+
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
