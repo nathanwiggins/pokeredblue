@@ -1,21 +1,48 @@
 CeruleanCaveB1FWildMons:
 	def_grass_wildmons 25 ; encounter rate
-	db 55, RHYDON
-	db 55, MAROWAK
-	db 55, ELECTRODE
-	db 64, CHANSEY
-	db 64, PARASECT
-	db 64, RAICHU
 IF DEF(_RED)
-	db 57, ARBOK
+	db  50, ALAKAZAM
+	db  50, ALAKAZAM
+	db  50, GENGAR
+	db  50, GENGAR
+	db  60, NIDOKING
+	db  60, NIDOKING
+	db  60, NIDOQUEEN
+	db  60, AERODACTYL
+	db  65, DRAGONITE
+	db  70, MEWTWO
 ENDC
 IF DEF(_BLUE)
-	db 57, SANDSLASH
+	db  50, ALAKAZAM
+	db  50, ALAKAZAM
+	db  50, GENGAR
+	db  50, GENGAR
+	db  60, NIDOQUEEN
+	db  60, NIDOQUEEN
+	db  60, NIDOKING
+	db  60, AERODACTYL
+	db  65, DRAGONITE
+	db  70, MEWTWO
 ENDC
-	db 65, DITTO
-	db 63, DITTO
-	db 67, DITTO
 	end_grass_wildmons
+
+; Red Version:
+; ALAKAZAM (30%)
+; GENGAR (30%)
+; NIDOKING (20%)
+; NIDOQUEEN (10%)
+; AERODACTYL (5%)
+; DRAGONITE (4%)
+; MEWTWO (1%)
+
+; Blue Version:
+; ALAKAZAM (30%)
+; GENGAR (30%)
+; NIDOQUEEN (20%)
+; NIDOKING (10%)
+; AERODACTYL (5%)
+; DRAGONITE (4%)
+; MEWTWO (1%)
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
