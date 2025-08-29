@@ -1,29 +1,58 @@
 SeafoamIslandsB3FWildMons:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 31, SLOWPOKE
-	db 31, SEEL
-	db 33, SLOWPOKE
-	db 33, SEEL
-	db 29, HORSEA
-	db 31, SHELLDER
-	db 31, HORSEA
-	db 29, SHELLDER
-	db 39, SEADRA
+	db  45, GOLDUCK
+	db  45, SLOWBRO
+	db  45, SLOWBRO
+	db  45, SLOWBRO
+	db  45, JYNX
+	db  45, DEWGONG
+	db  45, KINGLER
+	db  60, CLOYSTER
+	db  30, WARTORTLE
+	db  30, WARTORTLE
 ENDC
 IF DEF(_BLUE)
-	db 31, PSYDUCK
-	db 31, SEEL
-	db 33, PSYDUCK
-	db 33, SEEL
-	db 29, KRABBY
-	db 31, STARYU
-	db 31, KRABBY
-	db 29, STARYU
-	db 39, KINGLER
+	db  45, GOLDUCK
+	db  45, GOLDUCK
+	db  45, GOLDUCK
+	db  45, SLOWBRO
+	db  45, JYNX
+	db  45, DEWGONG
+	db  45, KINGLER
+	db  60, CLOYSTER
+	db  30, WARTORTLE
+	db  30, WARTORTLE
 ENDC
-	db 37, DEWGONG
 	end_grass_wildmons
 
-	def_water_wildmons 0 ; encounter rate
+; Red Version:
+; GOLDUCK (15%)
+; SLOWBRO (45%)
+; JYNX (10%)
+; DEWGONG (10%)
+; KINGLER (10%)
+; CLOYSTER (5%)
+; WARTORTLE (5%)
+
+; Blue Version:
+; GOLDUCK (45%)
+; SLOWBRO (15%)
+; JYNX (10%)
+; DEWGONG (10%)
+; KINGLER (10%)
+; CLOYSTER (5%)
+; WARTORTLE (5%)
+
+	def_water_wildmons 5 ; encounter rate
+	db 25, TENTACOOL
+	db 30, TENTACOOL
+	db 20, TENTACOOL
+	db 30, STARYU
+	db 35, TENTACOOL
+	db 30, STARYU
+	db 40, TENTACOOL
+	db 30, STARYU
+	db 30, STARYU
+	db 30, STARYU
 	end_water_wildmons
