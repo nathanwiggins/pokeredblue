@@ -26,5 +26,20 @@ IF DEF(_BLUE)
 ENDC
 	end_grass_wildmons
 
-	def_water_wildmons 0 ; encounter rate
+	def_water_wildmons 3 ; encounter rate
+	db  10, TENTACOOL
+	db  10, TENTACOOL
+	db  10, TENTACOOL
+	db  10, TENTACOOL
+	db  20, SHELLDER
+	db  20, SHELLDER
+	db  20, STARYU
+	db  20, STARYU
+	db  20, STARYU
+	db  20, STARYU
 	end_water_wildmons
+
+; Red & Blue Version:
+; TENTACOOL (60%)
+; SHELLDER (20%)
+; STARYU (20%)
