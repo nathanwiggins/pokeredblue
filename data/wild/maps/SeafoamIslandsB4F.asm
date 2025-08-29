@@ -1,7 +1,8 @@
 SeafoamIslandsB4FWildMons:
 	def_grass_wildmons 10 ; encounter rate
+IF DEF(_RED)
 	db  45, GOLDUCK
-	db  45, GOLDUCK
+	db  45, SLOWBRO
 	db  45, SLOWBRO
 	db  45, SLOWBRO
 	db  45, JYNX
@@ -9,12 +10,35 @@ SeafoamIslandsB4FWildMons:
 	db  45, KINGLER
 	db  60, CLOYSTER
 	db  30, WARTORTLE
+	db  30, WARTORTLE
+ENDC
+IF DEF(_BLUE)
+	db  45, GOLDUCK
+	db  45, GOLDUCK
+	db  45, GOLDUCK
+	db  45, SLOWBRO
+	db  45, JYNX
+	db  45, DEWGONG
+	db  45, KINGLER
+	db  60, CLOYSTER
+	db  30, WARTORTLE
 	db  50, ARTICUNO
+ENDC
 	end_grass_wildmons
 
-; Red & Blue Version:
-; GOLDUCK (30%)
-; SLOWBRO (30%)
+; Red Version:
+; GOLDUCK (15%)
+; SLOWBRO (45%)
+; JYNX (10%)
+; DEWGONG (10%)
+; KINGLER (10%)
+; CLOYSTER (5%)
+; WARTORTLE (4%)
+; ARTICUNO (1%)
+
+; Blue Version:
+; GOLDUCK (45%)
+; SLOWBRO (15%)
 ; JYNX (10%)
 ; DEWGONG (10%)
 ; KINGLER (10%)
