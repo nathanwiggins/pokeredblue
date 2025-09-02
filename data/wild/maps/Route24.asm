@@ -1,27 +1,44 @@
 Route24WildMons:
 	def_grass_wildmons 25 ; encounter rate
 IF DEF(_RED)
-	db  7, WEEDLE
-	db  8, KAKUNA
-	db 12, PIDGEY
-	db 12, ODDISH
-	db 13, ODDISH
-	db 10, ABRA
-	db 14, ODDISH
+	db  10, ODDISH
+	db  10, ODDISH
+	db  10, ODDISH
+	db  10, BELLSPROUT
+	db  10, METAPOD
+	db  10, KAKUNA
+	db  10, KAKUNA
+	db  10, VENONAT
+	db  10, VENONAT
+	db  10, VENONAT
 ENDC
 IF DEF(_BLUE)
-	db  7, CATERPIE
-	db  8, METAPOD
-	db 12, PIDGEY
-	db 12, BELLSPROUT
-	db 13, BELLSPROUT
-	db 10, ABRA
-	db 14, BELLSPROUT
+	db  10, ODDISH
+	db  10, BELLSPROUT
+	db  10, BELLSPROUT
+	db  10, BELLSPROUT
+	db  10, KAKUNA
+	db  10, METAPOD
+	db  10, METAPOD
+	db  10, VENONAT
+	db  10, VENONAT
+	db  10, VENONAT
 ENDC
-	db 13, PIDGEY
-	db  8, ABRA
-	db 12, ABRA
 	end_grass_wildmons
+
+; Red Version:
+; ODDISH (45%)
+; BELLSPROUT (15%)
+; METAPOD (10%)
+; KAKUNA (20%)
+; VENONAT (10%)
+
+; Blue Version:
+; ODDISH (15%)
+; BELLSPROUT (45%)
+; KAKUNA (10%)
+; METAPOD (20%)
+; VENONAT (10%)
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
