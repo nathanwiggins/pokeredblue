@@ -27,3 +27,6 @@ ENDC
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
+
+;Land 5 6 7 8
+;Water 4 9 14 19
