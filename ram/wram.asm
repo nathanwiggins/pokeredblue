@@ -2039,7 +2039,7 @@ wGameProgressFlagsEnd::
 
 wRandomWildMonClasses:: ds NUM_RANDOM_CLASSES
 
-	ds 53
+	ds 32
 
 wObtainedHiddenItemsFlags:: flag_array MAX_HIDDEN_ITEMS
 
