@@ -67,6 +67,12 @@ INCLUDE "engine/movie/oak_speech/init_player_data.asm"
 INCLUDE "engine/items/get_bag_item_quantity.asm"
 INCLUDE "engine/overworld/pathfinding.asm"
 INCLUDE "engine/gfx/hp_bar.asm"
+INCLUDE "engine/events/hidden_objects/bookshelves.asm"
+INCLUDE "engine/events/hidden_objects/indigo_plateau_statues.asm"
+INCLUDE "engine/events/hidden_objects/book_or_sculpture.asm"
+INCLUDE "engine/events/hidden_objects/elevator.asm"
+INCLUDE "engine/events/hidden_objects/town_map.asm"
+INCLUDE "engine/events/hidden_objects/pokemon_stuff.asm"
 
 
 SECTION "Font Graphics", ROMX
@@ -295,12 +301,6 @@ INCLUDE "engine/events/hidden_objects/gym_statues.asm"
 INCLUDE "engine/events/hidden_objects/bench_guys.asm"
 INCLUDE "engine/events/hidden_objects/blues_room.asm"
 INCLUDE "engine/events/hidden_objects/pokecenter_pc.asm"
-INCLUDE "engine/events/hidden_objects/bookshelves.asm"
-INCLUDE "engine/events/hidden_objects/indigo_plateau_statues.asm"
-INCLUDE "engine/events/hidden_objects/book_or_sculpture.asm"
-INCLUDE "engine/events/hidden_objects/elevator.asm"
-INCLUDE "engine/events/hidden_objects/town_map.asm"
-INCLUDE "engine/events/hidden_objects/pokemon_stuff.asm"
 
 
 SECTION "Battle Engine 11", ROMX
