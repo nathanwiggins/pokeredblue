@@ -1,29 +1,67 @@
 SeafoamIslandsB4FWildMons:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 31, HORSEA
-	db 31, SHELLDER
-	db 33, HORSEA
-	db 33, SHELLDER
-	db 29, SLOWPOKE
-	db 31, SEEL
-	db 31, SLOWPOKE
-	db 29, SEEL
-	db 39, SLOWBRO
+	db  45, GOLDUCK
+	db  45, SLOWBRO
+	db  45, SLOWBRO
+	db  45, SLOWBRO
+	db  45, JYNX
+	db  45, DEWGONG
+	db  45, KINGLER
+	db  60, CLOYSTER
+	db  30, WARTORTLE
+	db  50, ARTICUNO
 ENDC
 IF DEF(_BLUE)
-	db 31, KRABBY
-	db 31, STARYU
-	db 33, KRABBY
-	db 33, STARYU
-	db 29, PSYDUCK
-	db 31, SEEL
-	db 31, PSYDUCK
-	db 29, SEEL
-	db 39, GOLDUCK
+	db  45, GOLDUCK
+	db  45, GOLDUCK
+	db  45, GOLDUCK
+	db  45, SLOWBRO
+	db  45, JYNX
+	db  45, DEWGONG
+	db  45, KINGLER
+	db  60, CLOYSTER
+	db  30, WARTORTLE
+	db  50, ARTICUNO
 ENDC
-	db 32, GOLBAT
 	end_grass_wildmons
 
-	def_water_wildmons 0 ; encounter rate
+; Red Version:
+; GOLDUCK (15%)
+; SLOWBRO (45%)
+; JYNX (10%)
+; DEWGONG (10%)
+; KINGLER (10%)
+; CLOYSTER (5%)
+; WARTORTLE (4%)
+; ARTICUNO (1%)
+
+; Blue Version:
+; GOLDUCK (45%)
+; SLOWBRO (15%)
+; JYNX (10%)
+; DEWGONG (10%)
+; KINGLER (10%)
+; CLOYSTER (5%)
+; WARTORTLE (4%)
+; ARTICUNO (1%)
+
+	def_water_wildmons 5 ; encounter rate
+	db  45, TENTACRUEL
+	db  45, TENTACRUEL
+	db  45, SEAKING
+	db  45, SEAKING
+	db  45, SEADRA
+	db  45, SEADRA
+	db  60, STARMIE
+	db  45, LAPRAS
+	db  45, LAPRAS
+	db  45, LAPRAS
 	end_water_wildmons
+
+; Red & Blue Version:
+; TENTACRUEL (30%)
+; SEAKING (30%)
+; SEADRA (20%)
+; STARMIE (10%)
+; LAPRAS (10%)

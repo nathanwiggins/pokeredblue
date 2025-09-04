@@ -1,30 +1,48 @@
 SeafoamIslandsB1FWildMons:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 30, STARYU
-	db 30, HORSEA
-	db 32, SHELLDER
-	db 32, HORSEA
-	db 28, SLOWPOKE
-	db 30, SEEL
-	db 30, SLOWPOKE
-	db 28, SEEL
-	db 38, DEWGONG
-	db 37, SEADRA
+	db  45, GOLDUCK
+	db  45, SLOWBRO
+	db  45, SLOWBRO
+	db  45, SLOWBRO
+	db  45, JYNX
+	db  45, DEWGONG
+	db  45, KINGLER
+	db  60, CLOYSTER
+	db  30, WARTORTLE
+	db  30, WARTORTLE
 ENDC
 IF DEF(_BLUE)
-	db 30, SHELLDER
-	db 30, KRABBY
-	db 32, STARYU
-	db 32, KRABBY
-	db 28, PSYDUCK
-	db 30, SEEL
-	db 30, PSYDUCK
-	db 28, SEEL
-	db 38, DEWGONG
-	db 37, KINGLER
+	db  45, GOLDUCK
+	db  45, GOLDUCK
+	db  45, GOLDUCK
+	db  45, SLOWBRO
+	db  45, JYNX
+	db  45, DEWGONG
+	db  45, KINGLER
+	db  60, CLOYSTER
+	db  30, WARTORTLE
+	db  30, WARTORTLE
 ENDC
 	end_grass_wildmons
+
+; Red Version:
+; GOLDUCK (15%)
+; SLOWBRO (45%)
+; JYNX (10%)
+; DEWGONG (10%)
+; KINGLER (10%)
+; CLOYSTER (5%)
+; WARTORTLE (5%)
+
+; Blue Version:
+; GOLDUCK (45%)
+; SLOWBRO (15%)
+; JYNX (10%)
+; DEWGONG (10%)
+; KINGLER (10%)
+; CLOYSTER (5%)
+; WARTORTLE (5%)
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons

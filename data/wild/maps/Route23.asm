@@ -1,26 +1,48 @@
 Route23WildMons:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 26, EKANS
+	db  50, PIDGEOT
+	db  45, PRIMEAPE
+	db  45, ARBOK
+	db  45, ARBOK
+	db  45, SANDSLASH
+	db  45, SANDSLASH
+	db  45, SCYTHER
+	db  60, EXEGGUTOR
+	db  45, PINSIR
+	db  45, PINSIR
 ENDC
 IF DEF(_BLUE)
-	db 26, SANDSHREW
+	db  50, PIDGEOT
+	db  45, PRIMEAPE
+	db  45, SANDSLASH
+	db  45, SANDSLASH
+	db  45, ARBOK
+	db  45, ARBOK
+	db  45, PINSIR
+	db  60, EXEGGUTOR
+	db  45, SCYTHER
+	db  45, SCYTHER
 ENDC
-	db 33, DITTO
-	db 26, SPEAROW
-	db 38, FEAROW
-	db 38, DITTO
-	db 38, FEAROW
-IF DEF(_RED)
-	db 41, ARBOK
-ENDC
-IF DEF(_BLUE)
-	db 41, SANDSLASH
-ENDC
-	db 43, DITTO
-	db 41, FEAROW
-	db 43, FEAROW
 	end_grass_wildmons
+
+; Red Version:
+; PIDGEOT (15%)
+; PRIMEAPE (15%)
+; ARBOK (30%)
+; SANDSLASH (20%)
+; SCYTHER (10%)
+; EXEGGUTOR (5%)
+; PINSIR (5%)
+
+; Blue Version:
+; PIDGEOT (15%)
+; PRIMEAPE (15%)
+; SANDSLASH (30%)
+; ARBOK (20%)
+; PINSIR (10%)
+; EXEGGUTOR (5%)
+; SCYTHER (5%)
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons

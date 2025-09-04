@@ -1,16 +1,25 @@
 VictoryRoad3FWildMons:
 	def_grass_wildmons 15 ; encounter rate
-	db 24, MACHOP
-	db 26, GEODUDE
-	db 22, ZUBAT
-	db 42, ONIX
-	db 40, VENOMOTH
-	db 45, ONIX
-	db 43, GRAVELER
-	db 41, GOLBAT
-	db 42, MACHOKE
-	db 45, MACHOKE
+	db  45, DUGTRIO
+	db  45, MAROWAK
+	db  50, MACHAMP
+	db  50, GOLEM
+	db  50, MACHAMP
+	db  50, GOLEM
+	db  45, RHYDON
+	db  60, OMASTAR
+	db  60, KABUTOPS
+	db  60, KABUTOPS
 	end_grass_wildmons
+
+; Red & Blue Version:
+; DUGTRIO (15%)
+; MAROWAK (15%)
+; MACHAMP (25%)
+; GOLEM (25%)
+; RHYDON (10%)
+; OMASTAR (5%)
+; KABUTOPS (5%)
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
