@@ -47,4 +47,5 @@ TrainerNames::
 	li "CHANNELER"
 	li "AGATHA"
 	li "LANCE"
+	li "BILL"
 	assert_list_length NUM_TRAINERS
