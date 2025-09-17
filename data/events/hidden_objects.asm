@@ -58,6 +58,7 @@ HiddenObjectMaps:
 	db ROUTE_23
 	db VICTORY_ROAD_2F
 	db BILLS_HOUSE
+	db BILLS_HIDEOUT
 	db VIRIDIAN_CITY
 	db SAFARI_ZONE_WEST_REST_HOUSE
 	db SAFARI_ZONE_EAST_REST_HOUSE
@@ -146,6 +147,7 @@ HiddenObjectPointers:
 	dw Route23HiddenObjects
 	dw VictoryRoad2HiddenObjects
 	dw BillsHouseHiddenObjects
+	dw BillsHideoutHiddenObjects
 	dw ViridianCityHiddenObjects
 	dw SafariZoneRestHouse2HiddenObjects
 	dw SafariZoneRestHouse3HiddenObjects
@@ -549,6 +551,10 @@ VictoryRoad2HiddenObjects:
 
 BillsHouseHiddenObjects:
 	hidden_object  1,  4, SPRITE_FACING_UP, BillsHousePC
+	db -1 ; end
+
+BillsHideoutHiddenObjects:
+	hidden_object  0,  1, SPRITE_FACING_UP, OpenPokemonCenterPC
 	db -1 ; end
 
 ViridianCityHiddenObjects:
