@@ -47,38 +47,38 @@ _Route22Rival1VictoryText::
 	prompt
 
 _Route22RivalBeforeBattleText2::
-        text "<RIVAL>: What?"
-        line "<PLAYER>!"
+	text "<RIVAL>: What?"
+	line "<PLAYER>!"
 
-        para "So you're heading"
-        line "to #MON LEAGUE?"
+	para "So you're heading"
+	line "to #MON LEAGUE?"
 
-        para "I was about to"
-        line "challenge you,"
-        cont "maybe for fun..."
+	para "Don't pretend"
+	line "like you even"
+	cont "have a chance!"
 
-        para "But forget it."
-        line "You aren't even"
-        cont "a challenge now."
+	para "I was about to"
+	line "challenge you,"
+	cont "just for fun..."
 
-        para "The ELITE FOUR are"
-        line "the real obstacle."
+	para "But forget it."
+	line "You aren't even"
+	cont "a challenge now."
 
-        para "I need to figure"
-        line "out how to get"
-        cont "past them first."
+	para "The ELITE FOUR are"
+	line "the real obstacle."
 
-        para "Smell ya!"
-        done
+	para "I need to figure"
+	line "out how to get"
+	cont "past them."
 
-_Route22RivalAfterBattleText2::
-        text "<RIVAL>: The ELITE"
-        line "FOUR won't know"
-        cont "what beat them!"
+	para "The ELITE"
+	line "FOUR won't know"
+	cont "what hit them!"
 
-        para "I've got training"
-        line "to do. Later!"
-        done
+	para "I've got training"
+	line "to do. Later!"
+	done
 
 _Route22PokemonLeagueSignText::
         text "#MON LEAGUE"
