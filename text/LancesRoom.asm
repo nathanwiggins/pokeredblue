@@ -2,13 +2,12 @@ _LancesRoomLanceBeforeBattleText::
 	text "Ah! I heard about"
 	line "you <PLAYER>!"
 
-	para "I lead the ELITE"
-	line "FOUR! You can"
-	cont "call me LANCE the"
+	para "You can call"
+	cont "me LANCE, the"
 	cont "dragon trainer!"
 
 	para "You know that"
-	line "dragons are"
+	line "DRAGONITE are"
 	cont "mythical #MON!"
 
 	para "They're hard to"
@@ -16,8 +15,17 @@ _LancesRoomLanceBeforeBattleText::
 	cont "but their powers"
 	cont "are superior!"
 
-	para "They're virtually"
-	line "indestructible!"
+	para "Each of mine"
+	line "have a unique"
+	cont "specialty!"
+
+	para "You'll find that"
+	line "they're virtually"
+	cont "indestructible!"
+
+	para "If you even"
+	line "make it to them"
+	cont "that is..."
 
 	para "Well, are you"
 	line "ready to lose?"
