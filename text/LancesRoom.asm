@@ -3,7 +3,7 @@ _LancesRoomLanceBeforeBattleText::
 	line "you <PLAYER>!"
 
 	para "You can call"
-	cont "me LANCE, the"
+	line "me LANCE, the"
 	cont "dragon trainer!"
 
 	para "You know that"
