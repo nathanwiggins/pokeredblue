@@ -15,10 +15,6 @@ _LancesRoomLanceBeforeBattleText::
 	cont "but their powers"
 	cont "are superior!"
 
-	para "Each of mine"
-	line "have a unique"
-	cont "specialty!"
-
 	para "You'll find that"
 	line "they're virtually"
 	cont "indestructible!"
