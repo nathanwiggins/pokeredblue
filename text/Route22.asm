@@ -47,58 +47,40 @@ _Route22Rival1VictoryText::
 	prompt
 
 _Route22RivalBeforeBattleText2::
-	text "<RIVAL>: What?"
-	line "<PLAYER>! What a"
-	cont "surprise to see"
-	cont "you here!"
+        text "<RIVAL>: What?"
+        line "<PLAYER>!"
 
-	para "So you're going to"
-	line "#MON LEAGUE?"
+        para "So you're heading"
+        line "to #MON LEAGUE?"
 
-	para "You collected all"
-	line "the BADGEs too?"
-	cont "That's cool!"
+        para "I was about to"
+        line "challenge you,"
+        cont "maybe for fun..."
 
-	para "Then I'll whip you"
-	line "<PLAYER> as a"
-	cont "warm up for"
-	cont "#MON LEAGUE!"
+        para "But forget it."
+        line "You aren't even"
+        cont "a challenge now."
 
-	para "Come on!"
-	done
+        para "The ELITE FOUR are"
+        line "the real obstacle."
+
+        para "I need to figure"
+        line "out how to get"
+        cont "past them first."
+
+        para "Smell ya!"
+        done
 
 _Route22RivalAfterBattleText2::
-	text "That loosened me"
-	line "up! I'm ready for"
-	cont "#MON LEAGUE!"
+        text "<RIVAL>: The ELITE"
+        line "FOUR won't know"
+        cont "what beat them!"
 
-	para "<PLAYER>, you need"
-	line "more practice!"
-
-	para "But hey, you know"
-	line "that! I'm out of"
-	cont "here. Smell ya!"
-	done
-
-_Route22Rival2DefeatedText::
-	text "What!?"
-
-	para "I was just"
-	line "careless!"
-	prompt
-
-_Route22Rival2VictoryText::
-	text "<RIVAL>: Hahaha!"
-	line "<PLAYER>! That's"
-	cont "your best? You're"
-	cont "nowhere near as"
-	cont "good as me, pal!"
-
-	para "Go train some"
-	line "more! You loser!"
-	prompt
+        para "I've got training"
+        line "to do. Later!"
+        done
 
 _Route22PokemonLeagueSignText::
-	text "#MON LEAGUE"
-	line "Front Gate"
-	done
+        text "#MON LEAGUE"
+        line "Front Gate"
+        done

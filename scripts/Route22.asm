@@ -258,58 +258,45 @@ Route22SecondRivalBattleScript:
 	ret
 
 Route22Rival2StartBattleScript:
-	ld a, [wStatusFlags5]
-	bit BIT_SCRIPTED_NPC_MOVEMENT, a
-	ret nz
-	ld a, ROUTE22_RIVAL2
-	ldh [hSpriteIndex], a
-	ld a, [wSavedCoordIndex]
-	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22RivalBattleCoords
-	jr nz, .set_player_direction_left
-	ld a, PLAYER_DIR_DOWN
-	ld [wPlayerMovingDirection], a
-	ld a, SPRITE_FACING_UP
-	jr .set_rival_facing_direction
+        ld a, [wStatusFlags5]
+        bit BIT_SCRIPTED_NPC_MOVEMENT, a
+        ret nz
+        ld a, ROUTE22_RIVAL2
+        ldh [hSpriteIndex], a
+        ld a, [wSavedCoordIndex]
+        cp 1 ; index of second, lower entry in Route22DefaultScript.Route22RivalBattleCoords
+        jr nz, .set_player_direction_left
+        ld a, PLAYER_DIR_DOWN
+        ld [wPlayerMovingDirection], a
+        ld a, SPRITE_FACING_UP
+        jr .set_rival_facing_direction
 .set_player_direction_left
-	ld a, PLAYER_DIR_LEFT
-	ld [wPlayerMovingDirection], a
-	ld a, SPRITE_FACING_RIGHT
+        ld a, PLAYER_DIR_LEFT
+        ld [wPlayerMovingDirection], a
+        ld a, SPRITE_FACING_RIGHT
 .set_rival_facing_direction
-	ldh [hSpriteFacingDirection], a
-	call SetSpriteFacingDirectionAndDelay
-	xor a
-	ld [wJoyIgnore], a
-	ld a, TEXT_ROUTE22_RIVAL2
-	ldh [hTextID], a
-	call DisplayTextID
-	ld hl, wStatusFlags3
-	set BIT_TALKED_TO_TRAINER, [hl]
-	set BIT_PRINT_END_BATTLE_TEXT, [hl]
-	ld hl, Route22Rival2DefeatedText
-	ld de, Route22Rival2VictoryText
-	call SaveEndBattleTextPointers
-	ld a, OPP_RIVAL2
-	ld [wCurOpponent], a
-	ld hl, .StarterTable
-	call Route22GetRivalTrainerNoByStarterScript
-	ld a, SCRIPT_ROUTE22_RIVAL2_AFTER_BATTLE
-	ld [wRoute22CurScript], a
-	ret
+        ldh [hSpriteFacingDirection], a
+        call SetSpriteFacingDirectionAndDelay
+        xor a
+        ld [wJoyIgnore], a
+        ld a, TEXT_ROUTE22_RIVAL2
+        ldh [hTextID], a
+        call DisplayTextID
+        ld a, SCRIPT_ROUTE22_RIVAL2_AFTER_BATTLE
+        ld [wRoute22CurScript], a
+        ret
 
 .StarterTable:
-	db STARTER2, 10
+        db STARTER2, 10
 	db STARTER3, 11
 	db STARTER1, 12
 
 Route22Rival2AfterBattleScript:
-	ld a, [wIsInBattle]
-	cp $ff
-	jp z, Route22SetDefaultScript
-	ld a, ROUTE22_RIVAL2
-	ldh [hSpriteIndex], a
-	ld a, [wSavedCoordIndex]
-	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22RivalBattleCoords
-	jr nz, .set_player_direction_left
+        ld a, ROUTE22_RIVAL2
+        ldh [hSpriteIndex], a
+        ld a, [wSavedCoordIndex]
+        cp 1 ; index of second, lower entry in Route22DefaultScript.Route22RivalBattleCoords
+        jr nz, .set_player_direction_left
 	ld a, PLAYER_DIR_DOWN
 	ld [wPlayerMovingDirection], a
 	ld a, SPRITE_FACING_UP
@@ -317,25 +304,18 @@ Route22Rival2AfterBattleScript:
 .set_player_direction_left
 	ld a, PLAYER_DIR_LEFT
 	ld [wPlayerMovingDirection], a
-	ld a, SPRITE_FACING_RIGHT
+        ld a, SPRITE_FACING_RIGHT
 .set_rival_facing_direction
-	ldh [hSpriteFacingDirection], a
-	call SetSpriteFacingDirectionAndDelay
-	ld a, PAD_CTRL_PAD
-	ld [wJoyIgnore], a
-	SetEvent EVENT_BEAT_ROUTE22_RIVAL_2ND_BATTLE
-	ld a, TEXT_ROUTE22_RIVAL2
-	ldh [hTextID], a
-	call DisplayTextID
-	ld a, SFX_STOP_ALL_MUSIC
-	ld [wNewSoundID], a
-	call PlaySound
-	farcall Music_RivalAlternateStartAndTempo
-	ld a, [wSavedCoordIndex]
-	cp 1 ; index of second, lower entry in Route22DefaultScript.Route22RivalBattleCoords
-	jr nz, .exit_movement_2
-	call .RivalExit1Script
-	jr .next_script
+        ldh [hSpriteFacingDirection], a
+        call SetSpriteFacingDirectionAndDelay
+        ld a, PAD_CTRL_PAD
+        ld [wJoyIgnore], a
+        SetEvent EVENT_BEAT_ROUTE22_RIVAL_2ND_BATTLE
+        ld a, [wSavedCoordIndex]
+        cp 1 ; index of second, lower entry in Route22DefaultScript.Route22RivalBattleCoords
+        jr nz, .exit_movement_2
+        call .RivalExit1Script
+        jr .next_script
 .exit_movement_2
 	call .RivalExit2Script
 .next_script
@@ -430,17 +410,9 @@ Route22RivalBeforeBattleText2:
 	text_end
 
 Route22RivalAfterBattleText2:
-	text_far _Route22RivalAfterBattleText2
-	text_end
-
-Route22Rival2DefeatedText:
-	text_far _Route22Rival2DefeatedText
-	text_end
-
-Route22Rival2VictoryText:
-	text_far _Route22Rival2VictoryText
-	text_end
+        text_far _Route22RivalAfterBattleText2
+        text_end
 
 Route22PokemonLeagueSignText:
-	text_far _Route22PokemonLeagueSignText
-	text_end
+        text_far _Route22PokemonLeagueSignText
+        text_end
