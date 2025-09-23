@@ -80,6 +80,10 @@ _Route22RivalBeforeBattleText2::
 	line "to do. Later!"
 	done
 
+_Route22RivalAfterBattleText2::
+	text "Placeholder..."
+	done
+
 _Route22PokemonLeagueSignText::
         text "#MON LEAGUE"
         line "Front Gate"
