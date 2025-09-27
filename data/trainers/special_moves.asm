@@ -10,7 +10,7 @@ LoneMoves:
 	db 2, MEGA_DRAIN
 	db 3, TOXIC
 	db 3, PSYWAVE
-	db 3, FIRE_BLAST
+	db 4, FIRE_BLAST
 	db 4, FISSURE
 
 ; unique moves for elite 4
@@ -20,6 +20,6 @@ TeamMoves:
 	; trainer, move
 	db LORELEI, BLIZZARD
 	db BRUNO,   FISSURE
-	db AGATHA,  TOXIC
-	db LANCE,   BARRIER
+	db AGATHA,  PSYCHIC_M
+	db LANCE,   HYPER_BEAM
 	db -1 ; end
